@@ -1,0 +1,119 @@
+/*
+#0074e9 //파랑 e7223d//빨강 
+*/
+h1 {text-align:center; margin:50px;}
+
+h1 img {width:200px;}
+main {width:500px;   margin:0 auto;}
+main #loginForm {border-bottom:1px solid #ccc; margin-bottom:20px;
+padding-bottom:20px;}
+
+main #loginForm fieldset  ul li {
+    border:1px solid #ccc; background:#fff;
+    /*스팬의 크기를 자유롭게 조정할 수 있도록 flex-flow를 설정
+    좌우를 배치할 수 있게 크기를 입력할 수 있게. 미리준비*/
+    /* 박스 생성됨*/
+    display:flex; flex-flow:row nowrap;
+    margin-bottom:10px;
+}
+main #loginForm fieldset ul li.error {
+    color:#e7223d; padding:10px; display:none;
+}
+
+main #loginForm fieldset ul li span.id_bg {
+    border-right:1px solid #ccc;
+    padding:20px; width: 20px;
+    background-color:#f5f5f5;
+    position: relative;
+}
+main #loginForm fieldset ul li span.id_bg::after{
+    content:'';display:block;
+    background-image:url(../images/icon.svg);
+    background-position: 0 0;
+    width:21px; height:21px;
+    position:absolute; left:20px; top:12px;
+}
+main #loginForm fieldset ul li span.pw_bg {
+    border-right:1px solid #ccc;
+    padding:20px; width: 20px;
+    background-color:#f5f5f5;
+    position: relative;
+}
+main #loginForm fieldset ul li span.pw_bg::after{
+    content:'';display:block;
+    background-image:url(../images/icon.svg);
+    background-position: -21px -1px;
+    width:21px; height:21px;
+    position:absolute; left:20px; top:12px;
+}
+main #loginForm fieldset  ul li span input{
+    width:400px; height:38px;border:0; padding-left:10px;
+}
+main #loginForm fieldset  ul li span input::placeholder{
+   /*글자부분을 더 작게만들고 싶으면 placeholder:안내글자만 작게 만든다.*/
+   /*placeholder 이기 때문에 진짜 입력값은 기본값대로 블랙*/
+    font-size:0.90rem; color:#aaa;
+}
+main #loginForm fieldset ul li span input[type=text]
+main #loginForm fieldset ul li span input[type=password]
+main #loginForm fieldset ul li .pw_show_hide{
+   background-image:url(../images/icon.svg);
+   background-position:-150px 0px;
+   width:21px; height: 21px;
+   position:absolute; right:11px; top:8x;
+}
+
+
+main #loginForm fieldset .btm{
+    display:flex; flex-flow:row wrap;
+    padding:15px 0; justify-content:space-between;/*양쪽 끝으로 보내기*/
+}
+
+
+main #loginForm fieldset  .btm p label input[name=login_y]{
+    appearance: none;
+}
+main #loginForm fieldset  .btm p label input[name=login_y] + span::before{
+    background-color:#fff;
+    border:1px solid #ccc;
+    content:''; display:inline-block;
+    width:17px; height:17px;
+    /*before나 after는 content와 display를 안주면 대상이 안보인다. */
+    background-image:url(../images/icon.svg);
+    background-position:-65px -22px;
+    margin-right:5px;
+}
+main #loginForm fieldset  .btm p label input[name=login_y]:checked +span::before{
+background-position:-84px -21px;
+}
+
+main #loginForm fieldset .btm .idpw_serch {
+    color:#0074e9;
+}
+main #loginForm fieldset .btm .idpw_serch::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    background-image: url(../images/icon.svg);
+    background-position: 46px -20px;
+    margin-left: 5px;
+}
+
+main #loginForm fieldset #login_btn{
+    background-color:#0074e9;
+    width:100%; color:#fff; padding:20px 0;
+    box-shadow:0 2px 0 #00468b;
+}
+main .join_link{
+    
+    border:1px solid #aaa; color:#0074e9;/*테두리 */
+    display:block; text-align:center; background:#fff; padding:20px 0;width:100%;
+    box-shadow:0 2px 0 #b4b4b4;
+}
+footer {text-align: center; font-size:0.85rem; margin-top:30px;}
+
+
+
+
+
